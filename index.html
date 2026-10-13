@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="11-sinf astronomiya: mavzular, interaktiv simulyatsiyalar va testlar.">
+  <title>11-sinf Astronomiya | Koinot laboratoriyasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="index.html">✦ Koinot laboratoriyasi</a>
+      <a href="#mavzular">Mavzular</a>
+      <a href="#simulyatsiyalar">Simulyatsiyalar</a>
+      <a href="#test">Test</a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">11-SINF • ASTRONOMIYA</p>
+      <h1>Koinotni <span>kashf eting</span></h1>
+      <p class="intro">Sayyoralar, yulduzlar va galaktikalarni o‘rganing. Simulyatsiyalarni ishga tushiring va bilimingizni sinang.</p>
+      <a class="primary-btn" href="#simulyatsiyalar">Simulyatsiyani boshlash ↓</a>
+    </div>
+    <div class="orbit-art" aria-hidden="true">
+      <div class="orbit orbit-one"><span class="planet p1"></span></div>
+      <div class="orbit orbit-two"><span class="planet p2"></span></div>
+      <div class="sun"></div>
+      <span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">·</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="mavzular">
+      <div class="section-heading">
+        <div><p class="eyebrow">NAZARIYA</p><h2>Asosiy mavzular</h2></div>
+        <p>Har bir kartada qisqa izoh va o‘rganish uchun asosiy tushunchalar bor.</p>
+      </div>
+      <div class="topic-grid">
+        <article class="topic-card"><div class="topic-icon">☀</div><h3>Quyosh sistemasi</h3><p>Quyosh, sayyoralar, mitti sayyoralar va kichik osmon jismlari.</p><details><summary>Asosiy tushuncha</summary><p>Quyosh sistemasi markazida Quyosh joylashgan. Sayyoralar uning tortishish kuchi ta’sirida orbitalar bo‘ylab harakatlanadi.</p></details></article>
+        <article class="topic-card"><div class="topic-icon">☾</div><h3>Oy va uning fazalari</h3><p>Oyning ko‘rinishi nima sababdan o‘zgaradi?</p><details><summary>Asosiy tushuncha</summary><p>Oy o‘zidan yorug‘lik chiqarmaydi; Quyosh nurini qaytaradi. Biz yoritilgan qismining turli ulushlarini ko‘ramiz.</p></details></article>
+        <article class="topic-card"><div class="topic-icon">✺</div><h3>Tutilishlar</h3><p>Quyosh va Oy tutilishining shartlari.</p><details><summary>Asosiy tushuncha</summary><p>Quyosh tutilishida Oy Quyosh bilan Yer orasidan o‘tadi. Oy tutilishida esa Yer soyasi Oyga tushadi.</p></details></article>
+        <article class="topic-card"><div class="topic-icon">✧</div><h3>Yulduzlar</h3><p>Yulduzlarning harorati, yorqinligi va hayotiy bosqichlari.</p><details><summary>Asosiy tushuncha</summary><p>Yulduzlar ichida termoyadro reaksiyalari energiya ajratadi. Rang ko‘pincha sirt harorati bilan bog‘liq.</p></details></article>
+        <article class="topic-card"><div class="topic-icon">◉</div><h3>Galaktikalar</h3><p>Somon yo‘li va koinotdagi ulkan yulduz tizimlari.</p><details><summary>Asosiy tushuncha</summary><p>Galaktika yulduzlar, gaz, chang va qorong‘i modda kabi tarkibiy qismlardan iborat gravitatsion tizimdir.</p></details></article>
+        <article class="topic-card"><div class="topic-icon">∞</div><h3>Koinotning kengayishi</h3><p>Galaktikalar, qizil siljish va Katta portlash modeli.</p><details><summary>Asosiy tushuncha</summary><p>Katta miqyosda galaktikalar orasidagi masofalar ortib boradi. Uzoq galaktikalarning spektrida qizil siljish kuzatiladi.</p></details></article>
+      </div>
+    </section>
+
+    <section class="section sim-section" id="simulyatsiyalar">
+      <div class="section-heading">
+        <div><p class="eyebrow">AMALIY TAJRIBA</p><h2>Interaktiv simulyatsiyalar</h2></div>
+        <p>Parametrlarni o‘zgartiring va natijani kuzating. Bular o‘quv maqsadidagi soddalashtirilgan modellar.</p>
+      </div>
+      <div class="sim-grid">
+        <article class="sim-card">
+          <div class="sim-top"><span class="tag">SIMULYATSIYA 01</span><span>🪐</span></div>
+          <h3>Sayyora orbitasi</h3>
+          <p>Sayyora aylanish tezligini o‘zgartirib, uning harakatini kuzating.</p>
+          <div class="space-box" id="orbitBox"><div class="sim-sun"></div><div class="sim-orbit"><div class="sim-planet" id="movingPlanet"></div></div></div>
+          <label for="speed">Harakat tezligi: <strong id="speedValue">1.0×</strong></label>
+          <input id="speed" type="range" min="0" max="3" step="0.5" value="1">
+          <button class="secondary-btn" id="orbitToggle">To‘xtatish</button>
+          <p class="small-note">Eslatma: bu chizma haqiqiy masofa va o‘lchamlar masshtabida emas.</p>
+        </article>
+        <article class="sim-card">
+          <div class="sim-top"><span class="tag">SIMULYATSIYA 02</span><span>🌙</span></div>
+          <h3>Oy fazalari</h3>
+          <p>Slayderni surib, Oy diskining yoritilgan qismini o‘zgartiring.</p>
+          <div class="moon-stage"><div class="moon" id="moon"></div></div>
+          <label for="phase">Oy fazasi: <strong id="phaseName">Yangi oy</strong></label>
+          <input id="phase" type="range" min="0" max="7" step="1" value="0">
+          <div class="phase-labels"><span>Yangi oy</span><span>To‘lin oy</span></div>
+          <p class="small-note">Model Oyning yoritilgan ko‘rinishini soddalashtirib ko‘rsatadi.</p>
+        </article>
+        <article class="sim-card">
+          <div class="sim-top"><span class="tag">SIMULYATSIYA 03</span><span>🌡️</span></div>
+          <h3>Yulduz rangi va harorati</h3>
+          <p>Haroratni o‘zgartiring va yulduz rangining qanday almashishini kuzating.</p>
+          <div class="star-stage"><div class="demo-star" id="demoStar"></div><div class="temperature" id="tempLabel">5 800 K</div></div>
+          <label for="temperature">Sirt harorati: <strong id="tempValue">5 800 K</strong></label>
+          <input id="temperature" type="range" min="2500" max="12000" step="100" value="5800">
+          <p class="small-note">Ranglar taxminiy: yulduzning spektri faqat rang bilan to‘liq aniqlanmaydi.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="test">
+      <div class="quiz-panel">
+        <div><p class="eyebrow">BILIMNI TEKSHIRING</p><h2>Qisqa test</h2><p>Javobni tanlang va natijangizni tekshiring.</p></div>
+        <form id="quiz">
+          <fieldset><legend>1. Quyosh sistemasining markazida nima joylashgan?</legend>
+            <label class="answer"><input type="radio" name="q1" value="a"> Yer</label>
+            <label class="answer"><input type="radio" name="q1" value="b"> Quyosh</label>
+            <label class="answer"><input type="radio" name="q1" value="c"> Oy</label>
+          </fieldset>
+          <fieldset><legend>2. Oy o‘zidan yorug‘lik chiqaradimi?</legend>
+            <label class="answer"><input type="radio" name="q2" value="a"> Ha, doimo</label>
+            <label class="answer"><input type="radio" name="q2" value="b"> Yo‘q, Quyosh nurini qaytaradi</label>
+            <label class="answer"><input type="radio" name="q2" value="c"> Faqat to‘lin oyda</label>
+          </fieldset>
+          <fieldset><legend>3. Quyosh tutilishida qaysi jism Quyosh bilan Yer orasidan o‘tadi?</legend>
+            <label class="answer"><input type="radio" name="q3" value="a"> Mars</label>
+            <label class="answer"><input type="radio" name="q3" value="b"> Oy</label>
+            <label class="answer"><input type="radio" name="q3" value="c"> Yupiter</label>
+          </fieldset>
+          <button class="primary-btn" type="submit">Natijani ko‘rish</button>
+          <p id="quizResult" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><p>✦ Koinot laboratoriyasi · 11-sinf astronomiya uchun o‘quv loyihasi</p><p class="small-note">Mazmunni amaldagi darslik bilan solishtirib, o‘qituvchi ko‘rsatmalariga muvofiq kengaytiring.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
